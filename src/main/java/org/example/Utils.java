@@ -1,4 +1,5 @@
 package org.example;
+import java.util.Random;
 
 public class Utils {
 
@@ -17,5 +18,10 @@ public class Utils {
             toReturn += toReverse.charAt(i);
         }
         return toReturn;
+    }
+
+    public static int somethingRandom(Random random) {
+        //Random random = new Random();
+        return random.nextInt(100);
     }
 }

@@ -1,5 +1,8 @@
 import org.junit.jupiter.api.*;
-import static org.example.Utils.isPrime;
+import static org.example.Utils.*;
+import java.util.Random;
+
+import static org.example.Utils.somethingRandom;
 public class UtilsTest {
 
     @Test
@@ -8,17 +11,16 @@ public class UtilsTest {
     }
 
     @Test
-    public void testIsPrimeTrues() {
+    public void testIsPrimeTrue() {
+        Assertions.assertTrue(isPrime(2), "2 found not to be prime");
         Assertions.assertTrue(isPrime(7), "7 found not to be prime");
-        Assertions.assertTrue(isPrime(13),"13 found not to be prime");
-        Assertions.assertTrue(isPrime(2),"2 found not to be prime");
+        Assertions.assertTrue(isPrime(17), "17 found not to be prime");
     }
 
     @Test
-    public void testIsPrimeFalses() {
+    public void testIsPrimeFalse() {
+        Assertions.assertFalse(isPrime(6), "6 found to be prime");
         Assertions.assertFalse(isPrime(10), "10 found to be prime");
-        Assertions.assertFalse(isPrime(8),"8 found to be prime");
         //Assertions.assertFalse(isPrime(1), "1 found to be prime");
     }
-
 }
